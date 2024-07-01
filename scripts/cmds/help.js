@@ -40,7 +40,7 @@ module.exports = {
         const commandConfig = commands[commandName];
 
         if (commandConfig) {
-          let commandInfo = `─── NAME ────⭓\n\n» ${commandConfig.name}\n\n─── INFO ────⭓\n\n» Description: ${commandConfig.description || 'Do not have'}\n» Role: ${commandConfig.role}\n» Author: ${commandConfig.author || 'Unknown'}\n» Cooldown: ${commandConfig.cooldown}\n» Use Prefix: ${commandConfig.usePrefix}\n\n─── USAGE ────⭓\n\n» ${commandConfig.usage || `/${commandConfig.name}`}\n\n───────⭔`;
+          let commandInfo = `✓─── NAME ────⭓\n\n» ${commandConfig.name}\n\n─── INFO ────⭓\n\n» Description: ${commandConfig.description || 'Do not have'}\n» Role: ${commandConfig.role}\n» Author: ${commandConfig.author || 'Unknown'}\n» Cooldown: ${commandConfig.cooldown}\n» Use Prefix: ${commandConfig.usePrefix}\n\n─── USAGE ────⭓\n\n» ${commandConfig.usage || `/${commandConfig.name}`}\n\n───────⭔`;
           await bot.sendMessage(msg.chat.id, commandInfo, { parse_mode: 'markdown' });
         } else {
           await bot.sendMessage(msg.chat.id, `Command '${commandName}' not found.`);
